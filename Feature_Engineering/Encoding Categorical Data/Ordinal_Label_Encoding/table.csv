@@ -1,0 +1,7 @@
+Customer_ID,Age_Group,Education_Level,Income_Level,Satisfaction_Rating,City,Gender,Product_Rating
+C001,Young,High School,Low,Very Satisfied,New York,Male,5
+C002,Middle-Aged,Bachelor's,Medium,Satisfied,London,Female,4
+C003,Senior,Master's,High,Neutral,Tokyo,Male,3
+C004,Young,PhD,High,Dissatisfied,Berlin,Female,2
+C005,Middle-Aged,High School,Low,Very Dissatisfied,Mumbai,Male,1
+...,...,...,...,...,...,...,...
