@@ -42,3 +42,122 @@ The **Perceptron Trick** is a simple learning rule:
 ## One-Line Summary
 
 > **Perceptron Trick:** Move the decision boundary by updating the weights whenever the model makes a wrong prediction.
+
+> -------------------------------------------------------------------------------------------------------------------------------
+
+# Sigmoid Function (Logistic Regression)
+
+## Definition
+The **Sigmoid (Logistic) Function** converts a linear score into a **probability** between **0 and 1**, making it ideal for binary classification.
+
+## Formula
+
+\[
+\sigma(z)=\frac{1}{1+e^{-z}}
+\]
+
+where,
+
+\[
+z=w^Tx+b
+\]
+
+- \(w\): Weights
+- \(x\): Features
+- \(b\): Bias
+
+---
+
+## Workflow
+
+```text
+Features (x)
+     │
+     ▼
+z = wᵀx + b
+     │
+     ▼
+Sigmoid σ(z)
+     │
+     ▼
+Probability (0–1)
+     │
+     ▼
+Threshold (0.5)
+     │
+     ▼
+Class 0 or Class 1
+```
+
+---
+
+## Output Interpretation
+
+| z | σ(z) |
+|---|------|
+| Large Negative | ≈ 0 |
+| 0 | 0.5 |
+| Large Positive | ≈ 1 |
+
+---
+
+## Why Sigmoid?
+
+- Converts any real value into a probability.
+- Smooth & differentiable (supports gradient descent).
+- Used for **binary classification**.
+
+---
+
+## Decision Rule
+
+- **P ≥ 0.5** → Class 1
+- **P < 0.5** → Class 0
+
+---
+
+## Key Idea
+
+- Linear model computes **score**:
+  \[
+  z=w^Tx+b
+  \]
+- Sigmoid converts the score into **probability**.
+
+---
+
+## Log-Odds
+
+Logistic Regression assumes:
+
+\[
+\log\left(\frac{p}{1-p}\right)=w^Tx+b
+\]
+
+> **Log-odds are linear, not the probability.**
+
+---
+
+## Pros
+
+- Probability output (0–1)
+- Easy to interpret
+- Works well with Binary Cross-Entropy Loss
+
+---
+
+## Limitations
+
+- Suffers from **vanishing gradients** for very large \(|z|\).
+- Logistic Regression still has a **linear decision boundary**.
+
+---
+
+## Quick Revision
+
+- **Function:** Converts score → probability
+- **Range:** (0, 1)
+- **Formula:** \(\sigma(z)=\frac{1}{1+e^{-z}}\)
+- **Threshold:** 0.5 (default)
+- **Decision Boundary:** \(w^Tx+b=0\)
+- **Use:** Binary Classification
